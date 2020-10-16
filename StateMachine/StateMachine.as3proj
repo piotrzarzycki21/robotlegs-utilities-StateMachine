@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+  <output>
+    <movie platform="Flash Player"/>
+    <movie disabled="False"/>
+    <movie fps="32"/>
+    <movie background="#FFFFFF"/>
+    <movie version="11"/>
+    <movie path="bin-debug/StateMachine.swc"/>
+    <movie width="800"/>
+    <movie height="600"/>
+    <movie input=""/>
+  </output>
+  &lt;!-- Other classes to be compiled into your SWF --&gt;
+  <jsOutput>
+    <option path=""/>
+  </jsOutput>
+  <classpaths>
+    <class path="src"/>
+  </classpaths>
+  <moonshineResourcePaths></moonshineResourcePaths>
+  <moonshineNativeExtensionPaths></moonshineNativeExtensionPaths>
+  <build>
+    <option antBuildPath="build.xml"/>
+    <option customSDK=""/>
+    <option useResourceBundleMetadata="True"/>
+    <option sourceMap="False"/>
+    <option showDeprecationWarnings="True"/>
+    <option benchmark="False"/>
+    <option allowSourcePathOverlap="False"/>
+    <option compilerConstants=""/>
+    <option locale=""/>
+    <option accessible="False"/>
+    <option useNetwork="True"/>
+    <option showUnusedTypeSelectorWarnings="True"/>
+    <option additional="+configname=flex"/>
+    <option strict="True"/>
+    <option warnings="True"/>
+    <option showBindingWarnings="True"/>
+    <option es="False"/>
+    <option verboseStackTraces="False"/>
+    <option loadConfig=""/>
+    <option linkReport=""/>
+    <option optimize="False"/>
+    <option staticLinkRSL="False"/>
+    <option showActionScriptWarnings="True"/>
+  </build>
+  <mavenBuild>
+    <option dominoNotesProgram=""/>
+    <option mavenBuildPath=""/>
+    <option settingsFilePath=""/>
+    <option dominoNotesPlatform=""/>
+    <option commandLine="clean package"/>
+    <actions>
+      <action actionName="Build" action="install"/>
+      <action actionName="Clean and package" action="clean package"/>
+      <action actionName="Clean" action="clean"/>
+      <action actionName="Clean and Build" action="clean install"/>
+      <action actionName="Exploded" action="war:exploded"/>
+    </actions>
+  </mavenBuild>
+  <includeLibraries></includeLibraries>
+  <libraryPaths></libraryPaths>
+  <externalLibraryPaths></externalLibraryPaths>
+  <rslPaths></rslPaths>
+  <intrinsics></intrinsics>
+  <library></library>
+  <modules/>
+  <compileTargets>
+    <compile path="src/StateMachineClasses.as"/>
+  </compileTargets>
+  <hiddenPaths></hiddenPaths>
+  <preBuildCommand>null</preBuildCommand>
+  <postBuildCommand alwaysRun="False">null</postBuildCommand>
+  <trustSVNCertificate>False</trustSVNCertificate>
+  <options>
+    <option testMovieCommand=""/>
+    <option isPrimeFacesVisualEditor="False"/>
+    <option defaultBuildTargets=""/>
+    <option showHiddenPaths="False"/>
+    <option isRoyale="True"/>
+    <option isExportedToExistingSource="False"/>
+    <option testMovie=""/>
+    <option visualEditorExportPath=""/>
+  </options>
+  <moonshineRunCustomization>
+    <option customUrlToLaunch=""/>
+    <option deviceConnectType="USB"/>
+    <option deviceSimulator="null"/>
+    <option launchMethod="Simulator"/>
+    <option projectType="2"/>
+    <option webBrowser="null"/>
+    <option targetPlatform="2"/>
+    <option urlToLaunch=""/>
+    <deviceSimulator>null</deviceSimulator>
+    <certAndroid>null</certAndroid>
+    <certIos>null</certIos>
+    <certIosProvisioning>null</certIosProvisioning>
+  </moonshineRunCustomization>
+</project>

@@ -6,7 +6,15 @@
  */
 package org.robotlegs.utilities.statemachine
 {
-	import flash.events.Event;
+	COMPILE::SWF
+	{
+		import flash.events.Event;
+	}
+	
+	COMPILE::JS
+	{
+		import org.apache.royale.events.Event;
+	}
 
 	public class StateEvent extends Event
 	{
@@ -24,7 +32,14 @@ package org.robotlegs.utilities.statemachine
 			super(type, false, false);
 		}
 		
+		COMPILE::SWF
 		override public function clone() : Event
+		{
+			return new StateEvent(type, action, data);
+		}
+		
+		COMPILE::JS
+		override public function cloneEvent():Event
 		{
 			return new StateEvent(type, action, data);
 		}

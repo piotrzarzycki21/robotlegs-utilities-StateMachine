@@ -6,8 +6,15 @@
  */
 package org.robotlegs.utilities.statemachine
 {
-	import flash.events.IEventDispatcher;
+	COMPILE::SWF
+	{
+		import flash.events.IEventDispatcher;
+	}
 	
+	COMPILE::JS
+	{
+		import org.apache.royale.events.IEventDispatcher;
+	}
 
 	public class FSMInjector
 	{

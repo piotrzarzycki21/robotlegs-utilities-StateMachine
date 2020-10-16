@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.robotlegs.royale</groupId>
+    <artifactId>robotlegs-utilities-StateMachine</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+
+	<packaging>swc</packaging>
+	
+	<name>Robotlegs Utilities StateMachine</name>
+	<url>https://github.com/piotrzarzycki21/robotlegs-utilities-StateMachine</url>
+
+	<properties>
+		<!-- Coding has made no assumption about SWF target -->
+		<royale.targets>SWF,JSRoyale</royale.targets>
+		<royale.skipAS>false</royale.skipAS>
+		<royale.debug>true</royale.debug>
+
+		<!-- Royale Library versions -->
+		<royale.version>0.9.8-SNAPSHOT</royale.version>
+		<royale.compiler.version>0.9.8-SNAPSHOT</royale.compiler.version>
+		
+		<flash.version>20.0</flash.version>
+
+		<royale.sourceMapSettings>-source-map=false;</royale.sourceMapSettings>
+		<royale.jsDefaultInitializers>-js-default-initializers=true;</royale.jsDefaultInitializers>
+
+		<royale.keepAS3MetaData>-keep-as3-metadata+=
+			Inject,
+			PostConstruct,
+			PreDestroy;
+		</royale.keepAS3MetaData>
+
+		<royale.flex.config>
+			${royale.sourceMapSettings}
+			${royale.jsDefaultInitializers}
+			${royale.keepAS3MetaData}
+		</royale.flex.config>
+	</properties>
+
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.royale.compiler</groupId>
+				<artifactId>royale-maven-plugin</artifactId>
+				<version>${royale.compiler.version}</version>
+				<extensions>true</extensions>
+				<configuration>
+					<forceSwcExternalLibraryPath>false</forceSwcExternalLibraryPath>
+					<allowSubclassOverrides>true</allowSubclassOverrides>
+					<targetPlayer>${player.version}</targetPlayer>
+					<targets>${royale.targets}</targets>
+					<debug>${royale.debug}</debug>
+					<skipExtern>true</skipExtern>
+					<skipAS>${royale.skipAS}</skipAS>
+					<includeClasses>
+						<includeClass>StateMachineClasses</includeClass>
+					</includeClasses>
+					<includeLookupOnly>true</includeLookupOnly>
+					<additionalCompilerOptions>
+						${royale.flex.config}
+					</additionalCompilerOptions>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.royale.compiler</groupId>
+						<artifactId>compiler-jx</artifactId>
+						<version>${royale.compiler.version}</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+
+		</plugins>
+	</build>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>com.adobe.flash.framework</groupId>
+			<artifactId>playerglobal</artifactId>
+			<version>${flash.version}</version>
+			<type>swc</type>
+			<scope>runtime</scope>
+		</dependency>
+		<!--- Framework dependencies. The used definitions will NOT be merged in. -->
+		<dependency>
+			<groupId>org.apache.royale.framework</groupId>
+			<artifactId>Language</artifactId>
+			<version>${royale.version}</version>
+			<type>swc</type>
+			<classifier>js</classifier>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.royale.framework</groupId>
+			<artifactId>XML</artifactId>
+			<version>${royale.version}</version>
+			<type>swc</type>
+			<classifier>js</classifier>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.royale.framework</groupId>
+			<artifactId>Reflection</artifactId>
+			<version>${royale.version}</version>
+			<type>swc</type>
+			<classifier>js</classifier>
+		</dependency>
+
+    </dependencies>
+</project>
