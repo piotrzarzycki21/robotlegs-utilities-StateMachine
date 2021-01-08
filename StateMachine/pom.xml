@@ -21,7 +21,7 @@
 
 		<!-- Royale Library versions -->
 		<royale.version>0.9.8-SNAPSHOT</royale.version>
-		<royale.compiler.version>0.9.8-SNAPSHOT</royale.compiler.version>
+		<royale.compiler.version>0.9.9-SNAPSHOT</royale.compiler.version>
 		
 		<flash.version>20.0</flash.version>
 
@@ -51,7 +51,7 @@
 				<version>${royale.compiler.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-					<forceSwcExternalLibraryPath>false</forceSwcExternalLibraryPath>
+					<forceSwcExternalLibraryPath>true</forceSwcExternalLibraryPath>
 					<allowSubclassOverrides>true</allowSubclassOverrides>
 					<targetPlayer>${player.version}</targetPlayer>
 					<targets>${royale.targets}</targets>
